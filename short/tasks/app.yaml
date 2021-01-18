@@ -1,0 +1,9 @@
+- name: deploy app 
+  docker_container:
+    name: shortener
+    image: gpolicante/shorterner
+    ports: 
+      - 80:5000
+    env: 
+      TOKEN: "{{TOKEN_BITLY}}"
+   

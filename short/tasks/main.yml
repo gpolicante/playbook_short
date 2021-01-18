@@ -1,0 +1,10 @@
+---
+# tasks file for short
+
+- name: install docker 
+  include: docker.yaml
+
+
+
+- name: deploy app 
+  include: app.yaml

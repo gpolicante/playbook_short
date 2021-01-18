@@ -1,0 +1,14 @@
+- name: install docker 
+  shell: curl -fsSL https://get.docker.com | bash 
+
+- name: start docker 
+  ansible.builtin.service: 
+   name: docker
+   state: started
+   enabled: yes  
+
+- name: install pip module docker to ansible manager ddocker 
+  pip: 
+   name: docker
+   
+   
